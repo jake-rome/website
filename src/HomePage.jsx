@@ -18,7 +18,7 @@ function HomePage() {
   };
 
   const handleClick = () => {
-    navigate('/other'); // 👈 this is the path from <Route path="/other" ... />
+    navigate('/website/other'); // 👈 this is the path from <Route path="/other" ... />
   };
 
   return (
