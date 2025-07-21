@@ -1,0 +1,103 @@
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 2vw;
+  overflow: hidden;
+  left: 3vw;
+  top: -20.5vw;
+  cursor: pointer;
+}
+
+.star-border-container.DownloadMyResume {
+  position: relative;
+  left: 6vw;
+}
+
+.border-gradient-bottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -12px;
+  right: -250%;
+  border-radius: 50%;
+  animation: star-movement-bottom linear infinite alternate;
+  z-index: 0;
+}
+
+.border-gradient-top {
+  position: absolute;
+  opacity: 0.7;
+  width: 300%;
+  height: 50%;
+  top: -12px;
+  left: -250%;
+  border-radius: 50%;
+  animation: star-movement-top linear infinite alternate;
+  z-index: 0;
+}
+
+.inner-content {
+  position: relative;
+  border: 0.01vw;
+  background: #000;
+  overflow: hidden; /* clip the zoomed image */
+  color: #09090a;
+  font-size: 2vw;
+  text-align: center;
+  padding: 2vw 2vw;
+  border-radius: 2vw;
+  z-index: 1;
+  
+  
+
+  font-family: 'inter';
+  font-size: 2.5vw;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+}
+
+
+/* Zoom effect using ::before */
+.inner-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(viewmyworkimg4.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: transform 0.6s ease;
+  transform: scale(1);
+}
+.DownloadMyResume .inner-content::before{
+  background-image: url(gradientFlipped.png);
+}
+
+.inner-content:hover::before {
+  transform: scale(1.1);
+}
+
+@keyframes star-movement-bottom {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100%, 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes star-movement-top {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 0%);
+    opacity: 0;
+  }
+}
