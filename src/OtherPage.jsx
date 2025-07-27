@@ -33,7 +33,7 @@ function HomePage() {
       {/* Center content */}
       <div className="MainContent pdf-wrapper">
         <embed
-          src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=120"
+          src={"${process.env.PUBLIC_URL}/resume.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=120"}
           type="application/pdf"
           className="pdf-viewer"
         />
