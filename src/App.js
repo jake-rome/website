@@ -6,12 +6,10 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/other" element={<OtherPage />} />
       </Routes>
-    </Router>
   );
 }
 
