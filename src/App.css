@@ -52,7 +52,7 @@
 }
 .AppContainer {
   display: flex;
-  font-family: 'inter';
+  font-family: 'Inter', sans-serif;
   height:100vh;
   overflow: hidden;
 }
