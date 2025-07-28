@@ -61,6 +61,7 @@
   width: 14%;
   position: relative;
   background-image: url("gradientFlipped.png");
+  background-size: cover;
 
 }
 .GapPanel {
@@ -132,6 +133,7 @@
   position: relative;
   left: 29.5vw;
   font-size: 3.5vw;
+  font-weight: bold;
   /*top: 15.5vw;*/
   top: -20vw;
   
