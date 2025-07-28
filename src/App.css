@@ -184,6 +184,12 @@
   left: 29.5vw;
   top: -17.5vw;
 }
+.MailBox::before{
+  transform: scale(1);
+}
+.MailBox:hover::before {
+  transform: scale(1.1);
+}
 
 .LinkedInBox {
   display:flow-root;
