@@ -174,7 +174,9 @@
   width: 10vw;
   height: 3.5vw;
   border-radius: 1vw;
-  
+  background-image: url("mail-142.svg");
+  background-size: 3.1vw;
+  background-position: center;
   background-repeat: no-repeat;
   cursor:pointer;
   position: relative;
@@ -183,8 +185,6 @@
 }
 .MailBox::before{
   background-image: url("mail-142.svg");
-  background-size: 3.1vw;
-  background-position: center;
   transform: scale(1);
 }
 .MailBox:hover::before {
