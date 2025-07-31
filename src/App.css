@@ -86,7 +86,7 @@
   align-items: left;
   min-height: 100%; /* <-- changed from height: 100vh */
   overflow-x: hidden; /* <-- allow horizontal control */
-  overflow-y: auto;   /* <-- enable vertical scrolling */
+  overflow-y: visible;   /* <-- enable vertical scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
 }
@@ -169,8 +169,8 @@
 }
 
 .MailBox {
-  display:flex;
-  background-color: #2d3136; /*#382e63;*/
+  display: flex;
+  background-color: #2d3136;
   width: 10vw;
   height: 3.5vw;
   border-radius: 1vw;
@@ -178,22 +178,16 @@
   background-size: 3.1vw;
   background-position: center;
   background-repeat: no-repeat;
-  cursor:pointer;
+  cursor: pointer;
   position: relative;
   left: 29.5vw;
   top: -17.5vw;
-}
-.MailBox::before{
-  background-image: url("mail-142.svg");
-  transform: scale(1);
-}
-.MailBox:hover::before {
-  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .LinkedInBox {
-  display:flow-root;
-  background-color: #2d3136; /*#382e63;*/
+  display: flow-root;
+  background-color: #2d3136;
   width: 10vw;
   height: 3.5vw;
   border-radius: 1vw;
@@ -201,14 +195,15 @@
   background-size: 4.2vw;
   background-position: center;
   background-repeat: no-repeat;
-  cursor:pointer;
+  cursor: pointer;
   position: relative;
   left: 43.5vw;
   top: -21vw;
+  transition: transform 0.3s ease; /* Added hover transition */
 }
 
 .PhoneBox {
-  background-color: #2d3136; /*#382e63;*/
+  background-color: #2d3136;
   width: 10vw;
   height: 3.5vw;
   border-radius: 1vw;
@@ -216,10 +211,18 @@
   background-size: 3.6vw;
   background-position: center;
   background-repeat: no-repeat;
-  cursor:pointer;
-  position:relative;
+  cursor: pointer;
+  position: relative;
   left: 57vw;
   top: -24.5vw;
+  transition: transform 0.3s ease; /* Added hover transition */
+}
+
+/* Hover effects for all three boxes */
+.MailBox:hover,
+.LinkedInBox:hover,
+.PhoneBox:hover {
+  transform: scale(1.15);
 }
 
 
@@ -233,19 +236,6 @@
   left:10vw;
   top:-20vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .pdf-wrapper {
@@ -272,4 +262,8 @@
   border: none;
   margin: 0;
   padding: 0;
+}
+.buttbutt{
+  position: relative;
+  top: 10vh;
 }
