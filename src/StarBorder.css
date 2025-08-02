@@ -1,16 +1,16 @@
 .star-border-container {
   display: inline-block;
-  position: relative;
+  position: absolute;
   border-radius: 2vw;
   overflow: hidden;
   left: 3vw;
-  top: -20.5vw;
+  top: 27.5vw;
   cursor: pointer;
 }
 
 .star-border-container.DownloadMyResume {
-  position: relative;
-  left: 6vw;
+  position: absolute;
+  left: 37vw;
 }
 
 .border-gradient-bottom {

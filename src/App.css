@@ -82,6 +82,7 @@
   background-color: #121016; /* your solid background color */
   color: white;
   flex-direction: column;
+  position: relative;
   justify-content: left;
   align-items: left;
   min-height: 100%; /* <-- changed from height: 100vh */
@@ -113,7 +114,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
   top: 1vw;
   left: 3vw;
   /*cursor: pointer;*/
@@ -129,12 +130,12 @@
 
 .StaticIntroText {
   display: inline;
-  position: relative;
+  position: absolute;
   left: 29.5vw;
   font-size: 3.5vw;
   font-weight: bold;
   /*top: 15.5vw;*/
-  top: -20vw;
+  top: 12vw;
   
 }
 
@@ -162,10 +163,10 @@
   align-items: left;
   flex-wrap: wrap;
   color: white;
-  position: relative;
+  position: absolute;
   left: 29.5vw;
   /*top:6vw;*/
-  top: -20.5vw;
+  top: 3vw;
 }
 
 .MailBox {
@@ -179,9 +180,9 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   left: 29.5vw;
-  top: -17.5vw;
+  top: 20vw;
   transition: transform 0.3s ease;
 }
 
@@ -196,9 +197,9 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   left: 43.5vw;
-  top: -21vw;
+  top: 20vw;
   transition: transform 0.3s ease; /* Added hover transition */
 }
 
@@ -212,9 +213,9 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   left: 57vw;
-  top: -24.5vw;
+  top: 20vw;
   transition: transform 0.3s ease; /* Added hover transition */
 }
 
@@ -232,7 +233,7 @@
   background-repeat: no-repeat;
   cursor:pointer;
   width: 30vw;
-  position:relative;
+  position:absolute;
   left:10vw;
   top:-20vw;
 }
@@ -264,6 +265,7 @@
   padding: 0;
 }
 .buttbutt{
-  position: relative;
-  top: 10vh;
+  display: flex;
+  position: absolute;
+  left: 10vw;
 }
