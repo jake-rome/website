@@ -46,7 +46,7 @@ function HomePage() {
     setNotification({ show: true, message, type });
   };
   const handleLinkedinRedirect = () => {
-    window.open('www.linkedin.com/in/jake-rome-b36266267', '_blank');
+    window.open('https://www.linkedin.com/in/jake-rome-b36266267', '_blank');
   };
   
 
