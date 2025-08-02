@@ -8,6 +8,7 @@ import RotatingText from './RotatingText';
 import { motion } from "framer-motion";
 import Magnet from './Magnet';
 import StarBorder from './StarBorder';
+import React, { useState, useEffect } from 'react';
 
 
 
@@ -20,6 +21,34 @@ function HomePage() {
   const handleClick = () => {
     navigate('/other'); // 👈 this is the path from <Route path="/other" ... />
   };
+  const [notification, setNotification] = useState({ 
+    show: false, 
+    message: '', 
+    type: 'success' 
+  });
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      showNotification('Copied ✅', 'success');
+    } catch (err) {
+    }
+  };
+  useEffect(() => {
+    if (notification.show) {
+      const timer = setTimeout(() => {
+        setNotification(prev => ({ ...prev, show: false }));
+      }, 2000);
+      
+      return () => clearTimeout(timer); // Cleanup
+    }
+  }, [notification.show]);
+  const showNotification = (message, type = 'success') => {
+    setNotification({ show: true, message, type });
+  };
+  const handleLinkedinRedirect = () => {
+    window.open('www.linkedin.com/in/jake-rome-b36266267', '_blank');
+  };
+  
 
   return (
     
@@ -84,9 +113,10 @@ function HomePage() {
           </span>
         </motion.div>
 
-        <div className='MailBox'></div>
-        <div className='LinkedInBox'></div>
-        <div className='PhoneBox'></div>
+        <div className='MailBox' onClick={() => copyToClipboard('jrome8602@gmail.com')}></div>
+        <div className='LinkedInBox' onClick={() => handleLinkedinRedirect()}></div>
+        <div className='PhoneBox' onClick={() => copyToClipboard('6514479428')}></div>
+        
         <StarBorder
           as='f'
           className="ViewMyWork"
@@ -126,6 +156,12 @@ function HomePage() {
           alphaParticles={false}
           disableRotation={false}
         />
+      </div>
+          {/* Notification */}
+      <div 
+        className={`copy-notification ${notification.show ? 'show' : 'hide'}`}
+      >
+        {notification.message}
       </div>
     </div>
   );
