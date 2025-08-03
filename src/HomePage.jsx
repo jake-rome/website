@@ -48,6 +48,15 @@ function HomePage() {
   const handleLinkedinRedirect = () => {
     window.open('https://www.linkedin.com/in/jake-rome-b36266267', '_blank');
   };
+  const scrollToElement = () => {
+    const element = document.getElementById('target-element');
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',  // Smooth scrolling animation
+        block: 'start'       // Align to top of viewport
+      });
+    }
+  };
   
 
   return (
@@ -123,6 +132,7 @@ function HomePage() {
           color="cyan"
           speed="4s"
           thickness={2}
+          onClick={scrollToElement}
         >
           View My Work
         </StarBorder>
@@ -135,7 +145,8 @@ function HomePage() {
         >
           Download My Resume
         </StarBorder>
-        
+        <div className='AboutMeText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
+        <button id="target-element" className='testbutton'>ffsfsdfsdfds</button>
 
       </div>
       </div>

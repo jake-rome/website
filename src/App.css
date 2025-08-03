@@ -264,10 +264,10 @@
   margin: 0;
   padding: 0;
 }
-.buttbutt{
+.testbutton{
   display: flex;
   position: absolute;
-  left: 10vw;
+  top: 1220vw;
 }
 .copy-notification {
   position: fixed !important;
@@ -293,4 +293,13 @@
 
 .copy-notification.hide {
   opacity: 0 !important;
+}
+
+.AboutMeText {
+  font-size: 3vw; 
+  font-weight: bold;
+  color: rgb(185, 185, 185);
+  position:absolute;
+  top:37.5vw;
+  left: 4.5vw;
 }
