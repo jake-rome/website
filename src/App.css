@@ -298,8 +298,29 @@
 .AboutMeText {
   font-size: 3vw; 
   font-weight: bold;
-  color: rgb(185, 185, 185);
+  color: white;
   position:absolute;
   top:37.5vw;
   left: 4.5vw;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.AboutParagraph{
+  font-size: 1.65vw;
+  font-weight:bold;
+  color:rgb(116, 116, 119);
+  position:absolute;
+  top:42vw;
+  left:4.5vw;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.ProjectsText{
+  font-size: 3vw; 
+  font-weight: bold;
+  color: white;
+  position:absolute;
+  top:60vw;
+  left: 4.5vw;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }

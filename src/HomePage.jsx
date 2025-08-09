@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import Magnet from './Magnet';
 import StarBorder from './StarBorder';
 import React, { useState, useEffect } from 'react';
+import DecryptedText from './DecryptedText';
+import TiltedCard from './TiltedCard';
 
 
 
@@ -146,7 +148,31 @@ function HomePage() {
           Download My Resume
         </StarBorder>
         <div className='AboutMeText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
-        <button id="target-element" className='testbutton'>ffsfsdfsdfds</button>
+        <p className='AboutParagraph'>
+          This is text here for now<br />
+          this is more text
+        </p>
+
+        <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
+        <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={false}
+            displayOverlayContent={true}
+            overlayContent={
+              <p className="tilted-card-demo-text">
+                Kendrick Lamar - GNX
+              </p>
+            }
+          />
+        <button  className='testbutton'>ffsfsdfsdfds</button>
 
       </div>
       </div>
