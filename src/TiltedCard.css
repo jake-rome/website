@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  top: 67.5vw;
+  left:3vw;
 }
 
 .tilted-card-mobile-alert {
@@ -36,18 +38,28 @@
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 2vw;
   will-change: transform;
   transform: translateZ(0);
+  cursor: pointer;
+  border: 0.2vw solid rgba(	82, 39, 255, 0.7);
 }
 
 .tilted-card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 5%;
   z-index: 2;
   will-change: transform;
   transform: translateZ(30px);
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  padding: 1% 5%;
+  border-radius: 0.5vw;
+  line-height: 0;
+  cursor: pointer;
 }
 
 .tilted-card-caption {

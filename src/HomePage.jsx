@@ -154,24 +154,27 @@ function HomePage() {
         </p>
 
         <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
+        <div onClick={handleClick}>
         <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
             captionText="Kendrick Lamar - GNX"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
+            containerHeight="15vw"
+            containerWidth="15vw"
+            imageHeight="15vw"
+            imageWidth="15vw"
             rotateAmplitude={12}
             scaleOnHover={1.2}
             showMobileWarning={false}
             showTooltip={false}
             displayOverlayContent={true}
             overlayContent={
-              <p className="tilted-card-demo-text">
+              <p className="cardText1">
                 Kendrick Lamar - GNX
               </p>
             }
           />
+          </div>
+          
         <button  className='testbutton'>ffsfsdfsdfds</button>
 
       </div>

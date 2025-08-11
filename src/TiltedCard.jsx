@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const springValues = {
   damping: 30,
@@ -72,6 +75,7 @@ export default function TiltedCard({
     rotateY.set(0);
     rotateFigcaption.set(0);
   }
+   
 
   return (
     <figure
