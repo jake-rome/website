@@ -100,6 +100,10 @@ function HomePage() {
     // Or open a modal, show details, etc.
   };
 
+  const handleResumeClick = () => {
+    window.open(process.env.PUBLIC_URL + '/JakeRomeResume.pdf', '_blank')
+  }
+
   return (
     
     <div className="AppContainer">
@@ -183,6 +187,7 @@ function HomePage() {
           color="cyan"
           speed="4s"
           thickness={2}
+          onClick={handleResumeClick}
         >
           Download My Resume
         </StarBorder>
