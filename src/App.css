@@ -311,8 +311,47 @@
   color:rgb(137, 137, 142);
   position:absolute;
   top:41vw;
-  left:5.5vw;
+  left:7.5vw;
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.SecondImageContainter {
+  border: #ffffff;
+  border-width: 0.25vw;
+  border-radius: 2.5vw;
+  border-style: solid;
+  background-image: url("jplimage2.png");
+  width: 18vw;
+  height: 18vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 42.5vw;
+  left: 44vw;
+  /*cursor: pointer;*/
+}
+.MoreAboutMeBox {
+  background-color: #5227FF;
+  width: 28vw;
+  height: 3.5vw;
+  border-radius: 1vw;
+
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.2vw;
+  font-weight: bold;
+  
+  text-shadow: 0px 0px 12px rgba(46, 46, 46, 0.7);
+
+  cursor: pointer;
+  position: absolute;
+  left: 7.5vw;
+  top: 56.2vw;
+  transition: transform 0.3s ease; /* Added hover transition */
+}
+.MoreAboutMeBox:hover{
+  transform: scale(1.1);
 }
 
 .ProjectsText{
@@ -320,7 +359,7 @@
   font-weight: bold;
   color: white;
   position:absolute;
-  top:60vw;
+  top:62vw;
   left: 4.5vw;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }

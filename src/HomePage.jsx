@@ -156,6 +156,8 @@ function HomePage() {
           with a challenge or a new experience, and<br/>
           am driven by curiosity and innovation.
         </p>
+        <div className='SecondImageContainter'></div>
+        <div className='MoreAboutMeBox'>Learn more about me ➡</div>
 
         <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
         <div onClick={handleClick}>
