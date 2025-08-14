@@ -149,8 +149,12 @@ function HomePage() {
         </StarBorder>
         <div className='AboutMeText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Me&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
         <p className='AboutParagraph'>
-          This is text here for now<br />
-          this is more text
+          I am an aerospace engineering student at <br />
+          Georgia Tech who is passionate about using<br />
+          mechanical systems, materials, and designs <br/>
+          to bring ideas to life. I thrive when faced<br/>
+          with a challenge or a new experience, and<br/>
+          am driven by curiosity and innovation.
         </p>
 
         <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
