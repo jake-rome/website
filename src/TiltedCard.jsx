@@ -3,8 +3,6 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
 import { useNavigate } from 'react-router-dom';
 
-
-
 const springValues = {
   damping: 30,
   stiffness: 100,
@@ -25,25 +23,36 @@ export default function TiltedCard({
   showTooltip = true,
   overlayContent = null,
   displayOverlayContent = false,
+  // New props for multi-card optimization
+  cardId, // Optional unique identifier for debugging
+  type, // Optional type identifier (e.g., 'music', 'movie', 'book')
+  category, // Optional category identifier
+  artist, // Optional artist/creator name
+  title, // Optional title separate from captionText
+  metadata, // Optional additional data object
+  className = "", // Additional CSS classes
 }) {
   const ref = useRef(null);
 
-  const x = useMotionValue();
-  const y = useMotionValue();
+  // Create unique motion values for each card instance
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
   const rotateY = useSpring(useMotionValue(0), springValues);
   const scale = useSpring(1, springValues);
-  const opacity = useSpring(0);
+  const opacity = useSpring(0, springValues);
   const rotateFigcaption = useSpring(0, {
     stiffness: 350,
     damping: 30,
     mass: 1,
   });
 
+  // Local state for each card
   const [lastY, setLastY] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   function handleMouse(e) {
-    if (!ref.current) return;
+    if (!ref.current || !isHovered) return;
 
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
@@ -64,23 +73,27 @@ export default function TiltedCard({
   }
 
   function handleMouseEnter() {
+    setIsHovered(true);
     scale.set(scaleOnHover);
     opacity.set(1);
   }
 
   function handleMouseLeave() {
+    setIsHovered(false);
     opacity.set(0);
     scale.set(1);
     rotateX.set(0);
     rotateY.set(0);
     rotateFigcaption.set(0);
+    setLastY(0);
   }
-   
+
+  // Remove the built-in click handler since we're using wrapper div
 
   return (
     <figure
       ref={ref}
-      className="tilted-card-figure"
+      className={`tilted-card-figure ${className}`}
       style={{
         height: containerHeight,
         width: containerWidth,
@@ -88,6 +101,11 @@ export default function TiltedCard({
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      data-card-id={cardId}
+      data-card-type={type}
+      data-card-category={category}
+      data-artist={artist}
+      data-title={title}
     >
       {showMobileWarning && (
         <div className="tilted-card-mobile-alert">
@@ -118,13 +136,15 @@ export default function TiltedCard({
         {displayOverlayContent && overlayContent && (
           <motion.div
             className="tilted-card-overlay"
+            initial={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
           >
             {overlayContent}
           </motion.div>
         )}
       </motion.div>
 
-      {showTooltip && (
+      {showTooltip && captionText && (
         <motion.figcaption
           className="tilted-card-caption"
           style={{

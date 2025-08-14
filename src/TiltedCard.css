@@ -8,7 +8,6 @@
   align-items: center;
   justify-content: center;
   top: 67.5vw;
-  left:3vw;
 }
 
 .tilted-card-mobile-alert {
@@ -48,7 +47,7 @@
 .tilted-card-overlay {
   position: absolute;
   top: 10%;
-  left: 5%;
+  left: 10%;
   z-index: 2;
   will-change: transform;
   transform: translateZ(30px);

@@ -59,7 +59,46 @@ function HomePage() {
       });
     }
   };
+
+  const projectData = [
+    {
+      id: 'project-1',
+      title: 'Aerospace Design',
+      category: 'engineering',
+      type: 'project',
+      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
+      metadata: { year: 2024}
+    },
+    {
+      id: 'project-2', 
+      title: 'Materials Analysis',
+      category: 'research',
+      type: 'project',
+      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
+      metadata: { year: 2024}
+    },
+    {
+      id: 'project-3',
+      title: 'Flight Simulation',
+      category: 'software',
+      type: 'project', 
+      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
+      metadata: { year: 2023}
+    },
+    {
+      id: 'project-4',
+      title: 'Rocket Engine Design',
+      category: 'engineering',
+      type: 'project',
+      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58', 
+      metadata: { year: 2023}
+    }
+  ];
   
+  const handleProjectClick = (project) => {
+    navigate(`/project/${project.id}`);
+    // Or open a modal, show details, etc.
+  };
 
   return (
     
@@ -160,26 +199,36 @@ function HomePage() {
         <div className='MoreAboutMeBox'>Learn more about me ➡</div>
 
         <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
-        <div onClick={handleClick}>
-        <TiltedCard
-            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-            captionText="Kendrick Lamar - GNX"
-            containerHeight="15vw"
-            containerWidth="15vw"
-            imageHeight="15vw"
-            imageWidth="15vw"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={false}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className="cardText1">
-                Kendrick Lamar - GNX
-              </p>
-            }
-          />
-          </div>
+        <div className="projects-grid">
+          {projectData.map((project) => (
+            <div key={project.id} onClick={() => handleProjectClick(project)}>
+              <TiltedCard
+                cardId={project.id}
+                imageSrc={project.imageSrc}
+                captionText={project.title}
+                containerHeight="15vw"
+                containerWidth="15vw"
+                imageHeight="15vw"
+                imageWidth="15vw"
+                rotateAmplitude={10}
+                scaleOnHover={1.2}
+                showMobileWarning={false}
+                showTooltip={false}
+                displayOverlayContent={true}
+                type={project.type}
+                category={project.category}
+                title={project.title}
+                metadata={project.metadata}
+                className={`project-card project-${project.category}`}
+                overlayContent={
+                  <div className="cardText1">
+                    <p className="project-title">{project.title}</p>
+                  </div>
+                }
+              />
+            </div>
+          ))}
+        </div>
           
         <button  className='testbutton'>ffsfsdfsdfds</button>
 
