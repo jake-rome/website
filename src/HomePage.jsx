@@ -66,7 +66,7 @@ function HomePage() {
       title: 'FIRST Robotics',
       category: 'engineering',
       type: 'extracurricular',
-      imageSrc: 'FIRST_logo.png',
+      imageSrc: 'FIRST_Logo.png',
       metadata: { year: 2024}
     },
     {
