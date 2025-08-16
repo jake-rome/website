@@ -66,7 +66,7 @@ function HomePage() {
       title: 'FIRST Robotics',
       category: 'engineering',
       type: 'extracurricular',
-      imageSrc: '/FIRST_logo.png',
+      imageSrc: 'FIRST_logo.png',
       metadata: { year: 2024}
     },
     {
@@ -74,7 +74,7 @@ function HomePage() {
       title: 'Upper Story Internship',
       category: 'research',
       type: 'internship',
-      imageSrc: '/upperstorylogo.png',
+      imageSrc: 'upperstorylogo.png',
       metadata: { year: 2025}
     },
     {
@@ -82,7 +82,7 @@ function HomePage() {
       title: 'NASA L\'SPACE',
       category: 'research',
       type: 'extracurricular', 
-      imageSrc: '/nasa-logo-web-rgb.png',
+      imageSrc: 'nasa-logo-web-rgb.png',
       metadata: { year: 2025}
     },
     {
@@ -90,7 +90,7 @@ function HomePage() {
       title: '3D Printed Clock',
       category: 'engineering',
       type: 'project',
-      imageSrc: '/clock.png', 
+      imageSrc: 'clock.png', 
       metadata: { year: 2023}
     },
     {
@@ -98,7 +98,7 @@ function HomePage() {
       title: 'Tensile Test Machine',
       category: 'engineering',
       type: 'project',
-      imageSrc: '/tensiletest.png', 
+      imageSrc: 'tensiletest.png', 
       metadata: { year: 2024}
     },
     {
@@ -106,7 +106,7 @@ function HomePage() {
       title: 'Rubik\'s Cube Solver',
       category: 'engineering',
       type: 'project',
-      imageSrc: '/cubesolver.png', 
+      imageSrc: 'cubesolver.png', 
       metadata: { year: 2025}
     },
     {
@@ -114,7 +114,7 @@ function HomePage() {
       title: 'YJSP',
       category: 'engineering',
       type: 'extracurricular',
-      imageSrc: '/yjsplogo.png', 
+      imageSrc: 'yjsplogo.png', 
       metadata: { year: 2025}
     }
   ];

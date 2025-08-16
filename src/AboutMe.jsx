@@ -71,7 +71,7 @@ function HomePage() {
 
   return (
     
-    <div className="AppContainer">
+     <div className="AppContainer">
       {/* Left Panel with particles */}
       <div className="SidePanel">
         <Particles className='ParticlesContainer'
@@ -91,13 +91,11 @@ function HomePage() {
 
       {/* Center content */}
       <div className="MainContent">
-      
-
+        
+    </div>
+    <div className="GapPanel">
       </div>
       
-
-      <div className="GapPanel">
-      </div>
 
       {/* Right Panel with particles */}
       <div className="SidePanel">
@@ -112,9 +110,8 @@ function HomePage() {
           disableRotation={false}
         />
       </div>
-      
     </div>
   );
 }
 
-export default HomePage;
+export default AboutMe;
