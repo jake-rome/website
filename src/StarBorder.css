@@ -75,7 +75,7 @@
   transform: scale(1);
 }
 .DownloadMyResume .inner-content::before{
-  background-image: url(gradientFlipped.png);
+  background-image: url(resumeImg.png);
 }
 
 .inner-content:hover::before {

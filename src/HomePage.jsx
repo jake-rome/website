@@ -20,8 +20,8 @@ function HomePage() {
     console.log('All letters have animated!');
   };
 
-  const handleClick = () => {
-    navigate('/other'); // 👈 this is the path from <Route path="/other" ... />
+  const handleAboutMeClick = () => {
+    navigate('/AboutMe'); 
   };
   const [notification, setNotification] = useState({ 
     show: false, 
@@ -62,36 +62,60 @@ function HomePage() {
 
   const projectData = [
     {
-      id: 'project-1',
-      title: 'Aerospace Design',
+      id: 'FIRST',
+      title: 'FIRST Robotics',
       category: 'engineering',
-      type: 'project',
-      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
+      type: 'extracurricular',
+      imageSrc: '/FIRST_logo.png',
       metadata: { year: 2024}
     },
     {
-      id: 'project-2', 
-      title: 'Materials Analysis',
+      id: 'UpperStory', 
+      title: 'Upper Story Internship',
       category: 'research',
+      type: 'internship',
+      imageSrc: '/upperstorylogo.png',
+      metadata: { year: 2025}
+    },
+    {
+      id: 'LSPACE',
+      title: 'NASA L\'SPACE',
+      category: 'research',
+      type: 'extracurricular', 
+      imageSrc: '/nasa-logo-web-rgb.png',
+      metadata: { year: 2025}
+    },
+    {
+      id: 'Clock',
+      title: '3D Printed Clock',
+      category: 'engineering',
       type: 'project',
-      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
+      imageSrc: '/clock.png', 
+      metadata: { year: 2023}
+    },
+    {
+      id: 'Tensile',
+      title: 'Tensile Test Machine',
+      category: 'engineering',
+      type: 'project',
+      imageSrc: '/tensiletest.png', 
       metadata: { year: 2024}
     },
     {
-      id: 'project-3',
-      title: 'Flight Simulation',
-      category: 'software',
-      type: 'project', 
-      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
-      metadata: { year: 2023}
-    },
-    {
-      id: 'project-4',
-      title: 'Rocket Engine Design',
+      id: 'Cube',
+      title: 'Rubik\'s Cube Solver',
       category: 'engineering',
       type: 'project',
-      imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58', 
-      metadata: { year: 2023}
+      imageSrc: '/cubesolver.png', 
+      metadata: { year: 2025}
+    },
+    {
+      id: 'YJSP',
+      title: 'YJSP',
+      category: 'engineering',
+      type: 'extracurricular',
+      imageSrc: '/yjsplogo.png', 
+      metadata: { year: 2025}
     }
   ];
   
@@ -101,7 +125,7 @@ function HomePage() {
   };
 
   const handleResumeClick = () => {
-    window.open(process.env.PUBLIC_URL + '/JakeRomeResume.pdf', '_blank')
+    window.open(process.env.PUBLIC_URL + '/resume.pdf', '_blank')   
   }
 
   return (
@@ -140,7 +164,7 @@ function HomePage() {
           threshold={0.2}
           delay={0.3}
         >
-          <div className= "MainImageContainter" onClick={handleClick} >
+          <div className= "MainImageContainter">
         </div>
         </AnimatedContent>
         
@@ -201,7 +225,7 @@ function HomePage() {
           am driven by curiosity and innovation.
         </p>
         <div className='SecondImageContainter'></div>
-        <div className='MoreAboutMeBox'>Learn more about me ➡</div>
+        <div className='MoreAboutMeBox' onClick={handleAboutMeClick}>Learn more about me ➡</div>
 
         <div id="target-element" className='ProjectsText'>———————&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Projects&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———————</div>
         <div className="projects-grid">
@@ -235,7 +259,7 @@ function HomePage() {
           ))}
         </div>
           
-        <button  className='testbutton'>ffsfsdfsdfds</button>
+       <div className='PositioningBox'></div>
 
       </div>
       </div>

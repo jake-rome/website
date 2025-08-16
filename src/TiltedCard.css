@@ -41,7 +41,7 @@
   will-change: transform;
   transform: translateZ(0);
   cursor: pointer;
-  border: 0.2vw solid rgba(	82, 39, 255, 0.7);
+  border: 0.3vw solid rgba(	82, 39, 255, 1);
 }
 
 .tilted-card-overlay {
@@ -54,7 +54,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 1vw;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
   padding: 1% 5%;
   border-radius: 0.5vw;
   line-height: 0;
