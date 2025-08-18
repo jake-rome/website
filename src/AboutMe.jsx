@@ -11,14 +11,117 @@ import StarBorder from './StarBorder';
 import React, { useState, useEffect } from 'react';
 import DecryptedText from './DecryptedText';
 import TiltedCard from './TiltedCard';
+import Masonry from './Masonry';
+import './AboutMe.css'
+import SimpleMasonry from './SimpleMasonry';
+
+const items = [
+  { 
+    type: 'text', 
+    title1: 'I am from St. Paul, Minnesota. I went to Woodbury high school where I played hockey and lacrosse and particpated in robotics.',
+    column: 1
+  },
+  { 
+    type: 'image', 
+    src: 'hockey.jpg', 
+    column: 3
+  },
+  { 
+    type: 'image', 
+    src: 'mnwild.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'msaelev.jpg', 
+    column: 1
+  },
+  { 
+    type: 'text', 
+    title1: 'In my free time, I like to ski, watch sports, take up new engineering projects, hang out with friends, and play videogames.',
+    column: 3
+  }, 
+  { 
+    type: 'text', 
+    title1: 'Now, I am a sophmore at Georgia Tech studying aerospace engineering.',
+    column: 1
+  },
+  { 
+    type: 'image', 
+    src: 'belfast.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'ski.jpg', 
+    column: 3
+  },
+  { 
+    type: 'image', 
+    src: 'alvin.jpg', 
+    column: 1
+  },
+  { 
+    type: 'image', 
+    src: 'vikings.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'rpm.jpg', 
+    column: 3
+  },
+  { 
+    type: 'image', 
+    src: 'gramps.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'lax.jpg', 
+    column: 1
+  },
+  { 
+    type: 'text', 
+    title1: 'When I can, I like to leave my comfort zone and explore new areas and try new things.',
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'hiking.jpg', 
+    column: 3
+  } ,
+  { 
+    type: 'image', 
+    src: 'causeway.jpg', 
+    column: 1
+  } ,
+  { 
+    type: 'image', 
+    src: 'breakaway.jpg', 
+    column: 2
+  } ,
+  { 
+    type: 'image', 
+    src: 'puzzleworks.jpg', 
+    column: 1
+  } ,
+  { 
+    type: 'image', 
+    src: 'gabe.jpg', 
+    column: 3
+  } ,
+  { 
+    type: 'image', 
+    src: 'castle.jpg', 
+    column: 3
+  } 
+];
 
 
 
-function HomePage() {
+function AboutMe() {
   const navigate = useNavigate();
-  const handleAnimationComplete = () => {
-    console.log('All letters have animated!');
-  };
 
   const handleAboutMeClick = () => {
     navigate('/aboutme'); 
@@ -58,17 +161,6 @@ function HomePage() {
     }
   };
 
-  
-  
-  const handleProjectClick = (project) => {
-    navigate(`/project/${project.id}`);
-    // Or open a modal, show details, etc.
-  };
-
-  const handleResumeClick = () => {
-    window.open(process.env.PUBLIC_URL + '/resume.pdf', '_blank')   
-  }
-
   return (
     
      <div className="AppContainer">
@@ -91,9 +183,17 @@ function HomePage() {
 
       {/* Center content */}
       <div className="MainContent">
+        <div className='TopTextLine'>About Me</div>
+        <SimpleMasonry 
+          className='SimpleMasonry'
+          items={items}
+          columns={3}  // number of columns
+          gap={1}     // gap between items in pixels
+        />
         
-    </div>
-    <div className="GapPanel">
+
+      </div>
+      <div className="GapPanel">
       </div>
       
 
