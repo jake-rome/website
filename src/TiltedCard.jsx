@@ -97,6 +97,8 @@ export default function TiltedCard({
       style={{
         height: containerHeight,
         width: containerWidth,
+        position: 'relative', // Ensure relative positioning
+        pointerEvents: 'auto', // Ensure click events work
       }}
       onMouseMove={handleMouse}
       onMouseEnter={handleMouseEnter}
@@ -136,8 +138,6 @@ export default function TiltedCard({
         {displayOverlayContent && overlayContent && (
           <motion.div
             className="tilted-card-overlay"
-            initial={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
           >
             {overlayContent}
           </motion.div>

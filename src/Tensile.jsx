@@ -2,17 +2,10 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 //import FuzzyText from './FuzzyText';
 import Particles from './Particles';
-import StarBorder from './StarBorder';
 import PDFEmbed from './PDFEmbed';
-import AdvancedPdfEmbed from './AdvancedPdfEmbed';
 
-function HomePage() {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/other'); // 👈 this is the path from <Route path="/other" ... />
-  };
-
+function Tensile() {
+ 
   return (
     <div className="AppContainer">
       {/* Left Panel with particles */}
@@ -37,7 +30,7 @@ function HomePage() {
         
       {/*RIGHT HERE */}
       <PDFEmbed 
-          src="/resume.pdf" // Replace with your PDF path or URL
+          src="/Tensile.pdf" // Replace with your PDF path or URL
           width="100%"
           height="100vh"
         />
@@ -60,6 +53,4 @@ function HomePage() {
     </div>
   );
 }
-
-
-export default HomePage;
+export default Tensile;

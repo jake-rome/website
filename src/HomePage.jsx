@@ -23,6 +23,9 @@ function HomePage() {
   const handleAboutMeClick = () => {
     navigate('/AboutMe'); 
   };
+  const handleClick = () => {
+    navigate('/other'); 
+  };
   const [notification, setNotification] = useState({ 
     show: false, 
     message: '', 
@@ -116,6 +119,14 @@ function HomePage() {
       type: 'extracurricular',
       imageSrc: 'yjsplogo.png', 
       metadata: { year: 2025}
+    },
+    {
+      id: 'Website',
+      title: 'This Website',
+      category: 'computer science',
+      type: 'project',
+      imageSrc: 'website.png', 
+      metadata: { year: 2025}
     }
   ];
   
@@ -131,6 +142,7 @@ function HomePage() {
   return (
     
     <div className="AppContainer">
+      <div className='click-blocker'></div>
       {/* Left Panel with particles */}
       <div className="SidePanel">
         <Particles className='ParticlesContainer'

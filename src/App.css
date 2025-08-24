@@ -90,6 +90,8 @@
   overflow-y: visible;   /* <-- enable vertical scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
+  
+  
 }
 .MainContent::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
@@ -384,10 +386,34 @@
   transition: transform 0.2s ease;
 }
 
+/* BLOCKING OVERLAY - Add this to block incorrect clickable areas */
+.projects-grid > div {
+  pointer-events: none !important; /* Disable all clicks on wrapper */
+}
+
+.tilted-card-figure {
+  pointer-events: auto !important; /* Enable clicks only on the actual card */
+}
+
+.tilted-card-inner {
+  pointer-events: auto !important; /* Make sure inner content is clickable */
+}
+
 .PositioningBox{
   color:#121016;
   width:1px;
   height:1px;
-  position:absolute;
-  top:123vw;
+  position:relative;
+  top:68vw;
 }
+/*
+.projects-grid > div {
+  border: 2px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+.tilted-card-figure {
+  border: 10px solid green !important;
+  background: rgba(0, 0, 255, 0.1) !important;
+}
+  */
