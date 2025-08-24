@@ -36,7 +36,7 @@ function Website() {
         
       {/*RIGHT HERE */}
       <PDFEmbed 
-          src="/Website.pdf" // Replace with your PDF path or URL
+          src="Website.pdf" // Replace with your PDF path or URL
           width="100%"
           height="100vh"
         />

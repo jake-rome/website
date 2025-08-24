@@ -30,7 +30,7 @@ function Cube() {
         
       {/*RIGHT HERE */}
       <PDFEmbed 
-          src="/CubeSolver.pdf" // Replace with your PDF path or URL
+          src="CubeSolver.pdf" // Replace with your PDF path or URL
           width="100%"
           height="100vh"
         />

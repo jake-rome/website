@@ -31,7 +31,7 @@ function UpperStory() {
         
       {/*RIGHT HERE */}
       <PDFEmbed 
-          src="/upperstory.pdf" // Replace with your PDF path or URL
+          src="upperstory.pdf" // Replace with your PDF path or URL
           width="100%"
           height="100vh"
         />

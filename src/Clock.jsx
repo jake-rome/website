@@ -30,7 +30,7 @@ function clock() {
         
       {/*RIGHT HERE */}
       <PDFEmbed 
-          src="/clock.pdf" // Replace with your PDF path or URL
+          src="clock.pdf" // Replace with your PDF path or URL
           width="100%"
           height="100vh"
         />
