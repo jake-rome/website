@@ -136,7 +136,7 @@ function HomePage() {
   };
 
   const handleResumeClick = () => {
-    window.open(process.env.PUBLIC_URL + '/resume.pdf', '_blank')   
+    window.open(process.env.PUBLIC_URL + 'Jake Rome.pdf', '_blank')   
   }
 
   return (
@@ -188,7 +188,7 @@ function HomePage() {
             and I'm&nbsp;
             <span className="RotatingWordWrapper" layout>
             <RotatingText
-              texts={['Determined','Innovative', 'Curious', 'Proactive', 'Driven', 'Personable', 'Motivated', 'Positive', 'Versatile']}
+              texts={['Determined','Innovative', 'Curious', 'Versatile', 'Proactive', 'Driven', 'Analytical', 'Adaptable', 'Resourceful', 'Motivated', 'Hardworking']}
               mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
