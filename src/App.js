@@ -9,6 +9,7 @@ import Website from './Website';
 import Cube from './Cube';
 import Tensile from './Tensile';
 import LSPACE from './LSPACE';
+import YJSP from './YJSP';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/project/LSPACE" element={<LSPACE />}/>
         <Route path="/project/Clock" element={<Clock />}/>
         <Route path="/project/Tensile" element={<Tensile />}/>
+        <Route path="/project/YJSP" element={<YJSP />}/>
         <Route path="/AboutMe" element={<AboutMe />}/>
       </Routes>
   );
