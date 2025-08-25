@@ -136,7 +136,7 @@ function HomePage() {
   };
 
   const handleResumeClick = () => {
-    window.open(process.env.PUBLIC_URL + '/Jake Rome.pdf', '_blank')   
+    window.open(process.env.PUBLIC_URL + '/JakeRome.pdf', '_blank')   
   }
 
   return (
