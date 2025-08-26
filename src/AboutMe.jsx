@@ -18,7 +18,7 @@ import SimpleMasonry from './SimpleMasonry';
 const items = [
   { 
     type: 'text', 
-    title1: 'I am from St. Paul, Minnesota. I went to Woodbury high school where I played hockey and lacrosse and particpated in robotics.',
+    title1: 'I am from St. Paul, Minnesota. I went to Woodbury high school where I played hockey and lacrosse and participated in robotics.',
     column: 1
   },
   { 
@@ -43,7 +43,7 @@ const items = [
   }, 
   { 
     type: 'text', 
-    title1: 'Now, I am a sophmore at Georgia Tech studying aerospace engineering.',
+    title1: 'Now, I am a sophomore at Georgia Tech studying aerospace engineering.',
     column: 1
   },
   { 

@@ -36,6 +36,8 @@ function YJSP() {
         />
 
     </div>
+    <div className="GapPanelOther">
+      </div>
 
       {/* Right Panel with particles */}
       <div className="SidePanel">
