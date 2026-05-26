@@ -62,7 +62,6 @@ function HomePage() {
       });
     }
   };
-
   const projectData = [
     {
       id: 'DRXC',
