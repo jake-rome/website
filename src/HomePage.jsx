@@ -65,6 +65,14 @@ function HomePage() {
 
   const projectData = [
     {
+      id: 'DRXC',
+      title: 'DRXC',
+      category: 'engineering',
+      type: 'extracurricular',
+      imageSrc: 'DRXC Logo.png',
+      metadata: { year: 2026}
+    },
+    {
       id: 'FIRST',
       title: 'FIRST Robotics',
       category: 'engineering',
