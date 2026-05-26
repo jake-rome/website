@@ -10,6 +10,7 @@ import Cube from './Cube';
 import Tensile from './Tensile';
 import LSPACE from './LSPACE';
 import YJSP from './YJSP';
+import DRXC from './DRXC';
 
 import './App.css';
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/project/Clock" element={<Clock />}/>
         <Route path="/project/Tensile" element={<Tensile />}/>
         <Route path="/project/YJSP" element={<YJSP />}/>
+        <Route path="/project/DRXC" element={<DRXC />}/>
         <Route path="/AboutMe" element={<AboutMe />}/>
       </Routes>
   );

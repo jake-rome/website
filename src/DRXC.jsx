@@ -11,6 +11,7 @@ function UpperStory() {
   const handleClick = () => {
     navigate('/other'); // 👈 this is the path from <Route path="/other" ... />
   };
+  
   return (
     <div className="AppContainer">
       {/* Left Panel with particles */}
