@@ -72,20 +72,20 @@ function HomePage() {
       metadata: { year: 2026}
     },
     {
-      id: 'FIRST',
-      title: 'FIRST Robotics',
-      category: 'engineering',
-      type: 'extracurricular',
-      imageSrc: 'FIRST_Logo.png',
-      metadata: { year: 2024}
-    },
-    {
       id: 'UpperStory', 
       title: 'Upper Story Internship',
       category: 'research',
       type: 'internship',
       imageSrc: 'upperstorylogo.png',
       metadata: { year: 2025}
+    },
+    {
+      id: 'FIRST',
+      title: 'FIRST Robotics',
+      category: 'engineering',
+      type: 'extracurricular',
+      imageSrc: 'FIRST_Logo.png',
+      metadata: { year: 2024}
     },
     {
       id: 'LSPACE',
