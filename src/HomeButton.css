@@ -1,0 +1,38 @@
+.HomeButton {
+  position: fixed;
+  top: 1.25vw;
+  left: 1.25vw;
+  width: 4vw;
+  height: 4vw;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  opacity: 0.45;
+  cursor: pointer;
+  z-index: 20;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform-origin: center;
+}
+ 
+.HomeButton svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+ 
+.HomeButton:hover,
+.HomeButton:focus-visible {
+  opacity: 1;
+  transform: scale(1.15);
+}
+ 
+.HomeButton:active {
+  transform: scale(1.02);
+}
+ 
+.HomeButton:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+  border-radius: 4px;
+}

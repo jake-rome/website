@@ -3,6 +3,7 @@ import './App.css';
 //import FuzzyText from './FuzzyText';
 import Particles from './Particles';
 import PDFEmbed from './PDFEmbed';
+import HomeButton from './HomeButton';
 
 
 function Website() {
@@ -14,6 +15,7 @@ function Website() {
 
   return (
     <div className="AppContainer">
+      <HomeButton />
       {/* Left Panel with particles */}
       <div className="SidePanel">
         <Particles className='ParticlesContainer'

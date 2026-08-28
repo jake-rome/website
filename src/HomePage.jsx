@@ -11,6 +11,7 @@ import StarBorder from './StarBorder';
 import React, { useState, useEffect } from 'react';
 import DecryptedText from './DecryptedText';
 import TiltedCard from './TiltedCard';
+import HomeButton from './HomeButton';
 
 
 
@@ -51,7 +52,7 @@ function HomePage() {
     setNotification({ show: true, message, type });
   };
   const handleLinkedinRedirect = () => {
-    window.open('https://www.linkedin.com/in/jake-rome-b36266267', '_blank');
+    window.open('https://www.linkedin.com/in/jrome862/', '_blank');
   };
   const scrollToElement = () => {
     const element = document.getElementById('target-element');
@@ -143,7 +144,7 @@ function HomePage() {
   };
 
   const handleResumeClick = () => {
-    window.open(process.env.PUBLIC_URL + '/JakeRome.pdf', '_blank')   
+    window.open(process.env.PUBLIC_URL + '/JacobRome.pdf', '_blank')   
   }
 
   return (

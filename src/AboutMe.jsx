@@ -14,6 +14,7 @@ import TiltedCard from './TiltedCard';
 import Masonry from './Masonry';
 import './AboutMe.css'
 import SimpleMasonry from './SimpleMasonry';
+import HomeButton from './HomeButton';
 
 const items = [
   { 
@@ -28,11 +29,6 @@ const items = [
   },
   { 
     type: 'image', 
-    src: 'mnwild.jpg', 
-    column: 2
-  },
-  { 
-    type: 'image', 
     src: 'msaelev.jpg', 
     column: 1
   },
@@ -40,11 +36,26 @@ const items = [
     type: 'text', 
     title1: 'In my free time, I like to ski, watch sports, take up new engineering projects, hang out with friends, and play videogames.',
     column: 3
+  },
+  { 
+    type: 'image', 
+    src: 'alvin.jpg', 
+    column: 1
   }, 
   { 
     type: 'text', 
-    title1: 'Now, I am a sophomore at Georgia Tech studying aerospace engineering.',
+    title1: 'Now, I am a junior at Georgia Tech studying aerospace engineering. On campus, I am chief engineer of DRXC, conduct research for the NASA RAVEN project, and am invovled in greek life.',
     column: 1
+  },
+  { 
+    type: 'image', 
+    src: 'DBVF.jpg', 
+    column: 1
+  },
+  { 
+    type: 'image', 
+    src: 'vikings.jpg', 
+    column: 2
   },
   { 
     type: 'image', 
@@ -58,22 +69,22 @@ const items = [
   },
   { 
     type: 'image', 
-    src: 'alvin.jpg', 
-    column: 1
-  },
-  { 
-    type: 'image', 
-    src: 'vikings.jpg', 
-    column: 2
-  },
-  { 
-    type: 'image', 
     src: 'rpm.jpg', 
     column: 3
   },
   { 
     type: 'image', 
     src: 'gramps.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'RAVEN.jpg', 
+    column: 2
+  },
+  { 
+    type: 'image', 
+    src: 'Surfing.jpg', 
     column: 2
   },
   { 
@@ -98,7 +109,7 @@ const items = [
   } ,
   { 
     type: 'image', 
-    src: 'breakaway.jpg', 
+    src: 'Santana.jpg', 
     column: 2
   } ,
   { 
@@ -113,9 +124,14 @@ const items = [
   } ,
   { 
     type: 'image', 
+    src: 'Fishing.jpg', 
+    column: 3
+  } ,
+  { 
+    type: 'image', 
     src: 'castle.jpg', 
     column: 3
-  } 
+  }
 ];
 
 
@@ -164,6 +180,7 @@ function AboutMe() {
   return (
     
      <div className="AppContainer">
+      <HomeButton />
       {/* Left Panel with particles */}
       <div className="SidePanel">
         <Particles className='ParticlesContainer'
